@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import 'antd/dist/reset.css';
 import "./globals.css";
-
+import { Footer } from "./ui/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,10 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-black text-white">
+          <main className="flex-1">{children}</main>
+          <Footer />
+      </body>
     </html>
   );
 }

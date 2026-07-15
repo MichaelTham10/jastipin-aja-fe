@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+
+
+/* Expand icon rotation */
+.collapse-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 240ms ease;
+}
+.collapse-icon.active {
+	transform: rotate(180deg);
+}
+
+/* Align collapse headers consistently */
+.ant-collapse-header,
+.rc-collapse-header {
+	padding-left: 0.75rem !important;
+	padding-right: 0.75rem !important;
+}
+

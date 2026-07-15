@@ -1,34 +1,32 @@
-import { Button, Card, Divider } from 'antd';
+import { Button, Card, Divider, Image } from 'antd';
+import exampleAsset from '../assets/example_asset.jpg';
 import { GlobalText } from "./ui/GlobalText";
-import { FeatureCard } from "./ui/FeatureCard";
 import { StepsCards } from './features/StepsCards';
+import { Header } from './ui/Header';
+import { FeatureCard } from './features/FeatureCard';
 
 
 export default function Home() {
 
 
   return (
-    <div className="flex-1 bg-black p-10">
-      <div className="flex flex-row justify-between flex-1">
-        <h1 className="text-white text-2xl">JastipinAja</h1>
-        <div>
-          <div className="flex flex-row items-center gap-5">
-            <GlobalText variant="secondary" className=" text-xl">
+    <div className="flex-1 p-10">
+      <Header
+        title="JastipinAja"
+        rightContent={
+          <div className="flex flex-row items-center justify-center gap-5">
+            <GlobalText variant="secondary" className="text-xl">
               Cara Kerja
             </GlobalText>
-            <GlobalText variant="secondary" className=" text-xl">
+            <GlobalText variant="secondary" className="text-xl">
               Jadi Jastiper
             </GlobalText>
-            <Button color="blue" variant="solid" style={{
-              padding: 20
-            }}>
-              <span className="text-xl">
-                Coba Sekarang
-              </span>
+            <Button color="blue" variant="solid" href="/product" style={{ padding: 20 }}>
+              <span className="text-xl">Coba Sekarang</span>
             </Button>
           </div>
-        </div>
-      </div>
+        }
+      />
       <div className="flex flex-1 flex-col items-center justify-center mt-10">
         <GlobalText variant="primary" className="text-7xl">
           Titip beli, aman sampai tangan
@@ -36,6 +34,11 @@ export default function Home() {
         <GlobalText variant="secondary" className="text-3xl">
           Dana kamu ditahan sampai barang diterima. Jastip tanpa was-was ditipu
         </GlobalText>
+        <img
+          src={exampleAsset.src}
+          alt="Example asset"
+          className="mt-6 w-full max-w-2xl rounded-xl"
+        />
         <div className="flex flex-row items-center justify-center mt-10 gap-5">
           <Button color="blue" variant="solid" style={{
             padding: 20
