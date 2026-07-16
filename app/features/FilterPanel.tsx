@@ -79,6 +79,25 @@ export const FilterPanel: React.FC = () => {
         },
     ];
 
+    const jastipStatusItems: CollapseProps['items'] = [
+        {
+            key: '1',
+            label: <GlobalText>Status Jastip</GlobalText>,
+            children:
+                <div className="flex flex-col gap-2">
+                    <CheckboxFilter>
+                        <GlobalText variant="primary" className="text-xl">Open PO</GlobalText>
+                    </CheckboxFilter>
+                    <CheckboxFilter>
+                        <GlobalText variant="primary" className="text-xl">Batch Selesai</GlobalText>
+                    </CheckboxFilter>
+                    <CheckboxFilter>
+                        <GlobalText variant="primary" className="text-xl">Flash Sale</GlobalText>
+                    </CheckboxFilter>
+                </div>,
+        },
+    ];
+
 
 
     return (
@@ -95,9 +114,7 @@ export const FilterPanel: React.FC = () => {
             <DefaultDivider />
             <DefaultAccordion items={countryItems} />
             <DefaultDivider />
-            <DefaultAccordion items={countryItems} />
-            <DefaultDivider />
-            <DefaultAccordion items={countryItems} />
+            <DefaultAccordion items={jastipStatusItems} />
         </div>
     )
 }

@@ -7,7 +7,7 @@ export const ProductsCards: React.FC = () => {
     return (
         <a
             href="/product"
-            className="mt-8 block w-full max-w-sm cursor-pointer rounded-xl border border-white/20 bg-white/10 p-3 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:bg-white/20"
+            className="mt-3 block w-full max-w-sm cursor-pointer rounded-xl border border-white/20 bg-white/10 p-3 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:bg-white/20"
         >
             <img
                 src={exampleAsset.src}

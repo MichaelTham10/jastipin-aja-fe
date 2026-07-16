@@ -3,6 +3,7 @@ import { Header } from '../ui/Header';
 import { GlobalText } from '../ui/GlobalText';
 import { ProductsCards } from '../features/ProductsCards';
 import { FilterPanel } from '../features/FilterPanel';
+import { DefaultSelection } from '../ui/DefaultSelection';
 
 export default function ProductPage() {
     return (
@@ -63,12 +64,19 @@ export default function ProductPage() {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-5 ">
-                <div className="col-span-1 mr-[-50]">
+            <div className="grid grid-cols-4 mt-5">
+                <div className="col-span-1">
                     <FilterPanel />
                 </div>
-                <div className="flex flex-wrap items-center justify-center col-span-4">
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div className="ml-5 col-span-3">
+                    <div className="flex flex-row items-center justify-between  px-4 py-2">
+                        <GlobalText variant="primary">Menampilkan 15 dari 60 item</GlobalText>
+                        <div>
+                            <GlobalText className="mb-5">Urutkan Berdasarkan</GlobalText>
+                            <DefaultSelection />
+                        </div>
+                    </div>
+                    <div className=" flex flex-wrap items-center-justify-center grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
                         <ProductsCards />
                         <ProductsCards />
                         <ProductsCards />
@@ -85,6 +93,7 @@ export default function ProductPage() {
                         <ProductsCards />
                         <ProductsCards />
                     </div>
+
                 </div>
             </div>
 
